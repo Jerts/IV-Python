@@ -1,6 +1,6 @@
 from pathlength import pathlength
 import math as m
-
+#Generacion de puntos en el circulo
 def get_circle_points(n):
     x=[(1/2)*m.cos((2*m.pi*i)/n) for i in range(0,n+1)]
     y=[(1/2)*m.sin((2*m.pi*i)/n) for i in range(0,n+1)]
