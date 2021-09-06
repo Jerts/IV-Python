@@ -8,3 +8,12 @@ for line in new_file:
     data_str.append(line.split(","))
 
 new_file.close()
+
+data = np.asarray(data_str,dtype=float)
+data = data.T
+fig = plt.figure()
+ax = plt.axes()
+for i in range(1,len(data)):
+    ax.plot(data[0],data[i])
+ax.set_xlabel(r'$t$ (s)')
+ax.set_ylabel(r'$y$ (u.a.)')
